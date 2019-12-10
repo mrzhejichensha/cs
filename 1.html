@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 90%;
+                height: 500px;
+                border:1px solid red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id='box_li' class="box">
+            <p class="row"><span>爱不爱我</span></p>
+        </div>
+
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="/resources/media/20180614202844.m4a" loop="loop"></audio>
+    </body>
+    <script >
+        var box = document.getElementById('box_li');
+
+        var ps = document.getElementsByClassName('row');
+        ps[0].animate([
+            { transform: 'translateY(0px)' }, 
+            { transform: 'translateY(300px)' }
+        ], { 
+            duration: 3000,
+            iterations: Infinity
+        });
+    </script>
+</html>
