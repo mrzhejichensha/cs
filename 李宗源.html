@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 90%;
+                height: 500px;
+                border:1px solid red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id='box_li' class="box">
+            <p class="row"><span>李宗源是不是傻</span></p>
+        </div>
+    </body>
+    <script >
+        var box = document.getElementById('box_li');
+
+        var ps = document.getElementsByClassName('row');
+        ps[0].animate([
+            { transform: 'translateY(0px)' }, 
+            { transform: 'translateY(300px)' }
+        ], { 
+            duration: 3000,
+            iterations: Infinity
+        });
+    </script>
+</html>
